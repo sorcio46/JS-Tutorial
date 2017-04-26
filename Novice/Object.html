@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p id="demo"></p>
+
+<script>
+//Begin with the declaration of the object
+var person = {
+    firstName : "John",
+    lastName  : "Doe",
+    age       : 50,
+    eyeColor  : "blue",
+    gender    : "male",
+};
+
+var z="his/her";
+if(person.gender=="male")
+  z = "his";
+if(person.gender=="female")
+  z = "her";
+
+//let's print the object
+document.getElementById("demo").innerHTML =
+person.firstName + " is " + person.age + " years old and " + z + " eyes are " + person.eyeColor;
+</script>
+
+</body>
+</html>
