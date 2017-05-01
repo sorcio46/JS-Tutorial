@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Click the button to display the date.</p>
+
+<button onclick="displayDate()">The time is?</button>
+
+<script>
+function displayDate() {
+    document.getElementById("demo1").innerHTML = Date();
+}
+function displayCarType(){
+    document.getElementById("demo2").innerHTML = "Toyota Yaris";
+}
+</script>
+
+<p id="demo1"></p>
+<!-- Mouse over event -->
+<p id="demo2" onmouseover="displayCarType()">New Car, check it out!</p>
+
+</body>
+</html>

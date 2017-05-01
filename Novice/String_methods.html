@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="p1">Please locate where 'locate' occurs!.</p>
+<p id="p2">Alfa Romeo,Yaris,Opel,Fiat,Bidone</p>
+
+<button onclick="search()">Find it</button>
+<button onclick="length()">Lenght value</button>
+<button onclick="slice()">Slice it</button>
+<button onclick="replace()">Replace it</button>
+<button onclick="array()">Converts into an array</button>
+
+<p id="demo"></p>
+
+<script>
+function search() {
+    //take the value from element with id="p1"
+    var str = document.getElementById("p1").innerHTML;
+    //locate the position of the item "locate"
+    var pos = str.search("locate");
+    document.getElementById("demo").innerHTML = pos;
+}
+function length() {
+    var str = document.getElementById("p1").innerHTML;
+    //Returns the lenght of the string
+    var len = str.length;
+    document.getElementById("demo").innerHTML = len;
+}
+function slice(){
+    var str = document.getElementById("p1").innerHTML;
+    //Returns the substring from 6 to 12
+    var sub = str.slice(6,12);
+    document.getElementById("demo").innerHTML = sub;
+}
+function replace(){
+    var str = document.getElementById("p1").innerHTML;
+    //Replace the string "where" with "when"
+    var txt = str.replace("where","when");
+    document.getElementById("p1").innerHTML = txt;
+}
+function array(){
+   var str = document.getElementById("p2").innerHTML;
+   //Converts the string into an array
+   //with the separator ","
+   var array = str.split(",");
+   var i;
+   var text="";
+   for (i = 0 ; i<array.length ; i++){
+      text += array[i] + "<br>";
+   }
+   document.getElementById("demo").innerHTML = text;
+}
+</script>
+
+</body>
+</html>
