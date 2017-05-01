@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Arrays</h2>
+
+<p>The push method appends a new element to an array.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+<p id="iter"></p>
+
+<script>
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("demo").innerHTML = fruits;
+
+function myFunction() {
+    //Adds The string "lemon" to the array
+    fruits.push("Lemon");
+    //Then it refreshes the element with id "demo"
+    document.getElementById("demo").innerHTML = fruits;
+}
+
+//Let's see the standard iteration
+var i;
+var txt="<ul>"
+for (i = 0; i < fruits.length ; i++){
+    txt += "<li>"+fruits[i]+"</li>"
+}
+document.getElementById("iter").innerHTML = txt;
+
+/*
+ * In JavaScript, arrays use numbered indexes.
+ * In JavaScript, objects use named indexes.
+ * Arrays are a special kind of objects, with numbered indexes.
+ */
+
+</script>
+
+</body>
+</html>
