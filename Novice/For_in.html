@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Loops</h2>
+
+<p>The for/in statement loops through the properties of an object.</p>
+
+<p id="demo_classic"></p>
+<p id="demo_inner_method"></p>
+<p id="demo_for_in"></p>
+
+<script>
+var txt = "";
+var person = {
+    fname:"John",
+    lname:"Doe",
+    age:25,
+    desc : function (){
+      return this.fname + " " + this.lname + " " + this.age;
+    }}; 
+
+//we could use the inner method to get a complete description of the object
+document.getElementById("demo_inner_method").innerHTML = person.desc();
+
+//classic way to access the proporties of an object
+var text = person.fname + " " + person.lname + " " + person.age;
+document.getElementById("demo_classic").innerHTML = text;
+
+//use of for in to loop thre proporties of an object
+var x;
+for (x in person) {
+    txt += person[x] + " ";
+}
+document.getElementById("demo_for_in").innerHTML = txt;
+</script>
+
+</body>
+</html>
